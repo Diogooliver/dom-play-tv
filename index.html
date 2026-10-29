@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -6,11 +7,10 @@
 <meta name="theme-color" content="#090b10">
 <title>DOM PLAY TV — Painel Administrativo</title>
 <style>
-:root{--bg:#090b10;--panel:#11151d;--panel2:#171d27;--line:#28303d;--text:#f3f5f8;--muted:#9ba6b5;--red:#ff303c;--red2:#b90f20;--silver:#dce2ea;--green:#35c98a;--yellow:#f3bd4e}
+:root{--bg:#090b10;--panel:#11151d;--panel2:#171d27;--line:#28303d;--text:#f3f5f8;--muted:#9ba6b5;--red:#ff303c;--red2:#b90f20;--green:#35c98a;--yellow:#f3bd4e}
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(circle at top right,#241018 0,#090b10 38%);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);min-height:100vh}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
 .app{max-width:1180px;margin:auto;padding:16px 14px 90px}
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 2px 22px}
 .brand{display:flex;align-items:center;gap:11px}
@@ -27,21 +27,16 @@ button{cursor:pointer}
 .hero .actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
 .btn{border:1px solid var(--line);background:#1b222e;color:var(--text);padding:11px 14px;border-radius:11px;font-weight:750;font-size:12px}
 .btn.primary{background:linear-gradient(120deg,#ff3441,#c81427);border-color:#ff515b;color:white;box-shadow:0 6px 18px #ff303c20}
-.btn.ghost{background:transparent}
-.btn.small{padding:7px 9px;font-size:11px}
+.btn.ghost{background:transparent}.btn.small{padding:7px 9px;font-size:11px}
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin:14px 0 20px}
 .stat{border:1px solid var(--line);background:#11151deF;border-radius:15px;padding:15px;min-width:0}
-.stat .label{font-size:11px;color:var(--muted)}
-.stat .value{font-size:24px;font-weight:850;margin-top:9px;letter-spacing:-.5px;overflow-wrap:anywhere}
-.stat .foot{font-size:10px;color:var(--muted);margin-top:5px}
-.stat.red .value{color:#ff616b}
-.stat.green .value{color:var(--green)}
+.stat .label{font-size:11px;color:var(--muted)}.stat .value{font-size:24px;font-weight:850;margin-top:9px;letter-spacing:-.5px;overflow-wrap:anywhere}.stat .foot{font-size:10px;color:var(--muted);margin-top:5px}
+.stat.red .value{color:#ff616b}.stat.green .value{color:var(--green)}
 .nav{display:flex;gap:7px;overflow:auto;padding:0 0 12px;margin-bottom:5px;scrollbar-width:none}
 .nav button{white-space:nowrap;border:1px solid var(--line);background:#11151d;color:var(--muted);padding:10px 13px;border-radius:10px;font-size:12px;font-weight:750}
 .nav button.active{background:#32161d;border-color:#a72b37;color:#fff}
 .section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:12px 0}
-.section-head h3{font-size:17px;margin:0}
-.section-head p{font-size:11px;color:var(--muted);margin:5px 0 0}
+.section-head h3{font-size:17px;margin:0}.section-head p{font-size:11px;color:var(--muted);margin:5px 0 0}
 .panel{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:15px;margin-bottom:14px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
 .field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
@@ -50,25 +45,19 @@ button{cursor:pointer}
 .field input:focus,.field select:focus,.field textarea:focus,.search:focus{border-color:#ff4652}
 .field textarea{min-height:74px;resize:vertical}
 .form-actions{display:flex;gap:8px;flex-wrap:wrap}
-.toolbar{display:flex;gap:8px;align-items:center;margin:12px 0}
-.toolbar .search{flex:1}
+.toolbar{display:flex;gap:8px;align-items:center;margin:12px 0}.toolbar .search{flex:1}
 .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}
 table{border-collapse:collapse;width:100%;min-width:650px;font-size:12px}
 th,td{text-align:left;padding:12px;border-bottom:1px solid #242b36}
 th{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);background:#151a23}
 tr:last-child td{border-bottom:0}
-.person{font-weight:800}
-.sub{font-size:10px;color:var(--muted);margin-top:4px}
+.person{font-weight:800}.sub{font-size:10px;color:var(--muted);margin-top:4px}
 .pill{display:inline-flex;align-items:center;padding:5px 8px;border-radius:30px;font-size:10px;font-weight:800}
-.pill.active{background:#123527;color:#60e2a9}
-.pill.due{background:#3a2c13;color:#ffd16a}
-.pill.expired{background:#3a1820;color:#ff7b87}
-.pill.pending{background:#202b3b;color:#a7c9ff}
+.pill.active{background:#123527;color:#60e2a9}.pill.due{background:#3a2c13;color:#ffd16a}.pill.expired{background:#3a1820;color:#ff7b87}.pill.pending{background:#202b3b;color:#a7c9ff}
 .empty{text-align:center;color:var(--muted);padding:28px 12px;font-size:12px}
 .list{display:grid;gap:9px}
 .item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#151a23;border:1px solid #272f3b;border-radius:12px;padding:12px}
-.item strong{font-size:12px}
-.item small{display:block;color:var(--muted);font-size:10px;margin-top:4px}
+.item strong{font-size:12px}.item small{display:block;color:var(--muted);font-size:10px;margin-top:4px}
 .amount{font-weight:850;color:#f3f5f8;white-space:nowrap}
 .hint{color:var(--muted);font-size:11px;line-height:1.55}
 .warning{border:1px solid #6a4d20;background:#2a2114;color:#f8d995;border-radius:12px;padding:12px;font-size:11px;line-height:1.5;margin-bottom:13px}
@@ -78,140 +67,114 @@ tr:last-child td{border-bottom:0}
 .modal-back{position:fixed;inset:0;background:#000b;display:grid;place-items:end center;padding:12px;z-index:10}
 .modal{width:min(600px,100%);max-height:90vh;overflow:auto;background:#11151d;border:1px solid #343b49;border-radius:18px;padding:18px;box-shadow:0 20px 80px #0009}
 .modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
-.modal-head h3{margin:0;font-size:18px}
-.x{border:0;background:#252b35;color:white;border-radius:9px;padding:8px 11px}
+.modal-head h3{margin:0;font-size:18px}.x{border:0;background:#252b35;color:white;border-radius:9px;padding:8px 11px}
 .bottomnav{display:none}
 @media(max-width:700px){
-.app{padding:12px 12px 86px}
-.top{padding-bottom:15px}
-.brand h1{font-size:15px}
-.brand p{font-size:9px}
-.mark{width:43px;height:43px}
-.status{font-size:10px;padding:6px 8px}
-.hero{padding:19px 17px}
-.hero h2{font-size:24px}
-.hero p{font-size:12px}
-.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-.stat{padding:13px}
-.stat .value{font-size:22px}
-.grid2{grid-template-columns:1fr;gap:0}
-.section-head{align-items:flex-start}
-.nav{padding-bottom:10px}
-.panel{padding:12px}
+.app{padding:12px 12px 86px}.top{padding-bottom:15px}.brand h1{font-size:15px}.brand p{font-size:9px}.mark{width:43px;height:43px}
+.status{font-size:10px;padding:6px 8px}.hero{padding:19px 17px}.hero h2{font-size:24px}.hero p{font-size:12px}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{padding:13px}.stat .value{font-size:22px}
+.grid2{grid-template-columns:1fr;gap:0}.section-head{align-items:flex-start}.nav{padding-bottom:10px}.panel{padding:12px}
 .bottomnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:5;background:#0c0f15f5;border-top:1px solid var(--line);padding:8px max(8px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));justify-content:space-around;backdrop-filter:blur(16px)}
 .bottomnav button{border:0;background:transparent;color:var(--muted);font-size:10px;padding:6px 5px;display:grid;gap:4px;justify-items:center}
-.bottomnav button span{font-size:17px}
-.bottomnav button.active{color:#ff626c}
-.hero:after{font-size:80px;bottom:-24px}
-.modal-back{padding:0;place-items:end center}
-.modal{border-radius:18px 18px 0 0;max-height:92vh;padding:17px 15px calc(20px + env(safe-area-inset-bottom))}
+.bottomnav button span{font-size:17px}.bottomnav button.active{color:#ff626c}.hero:after{font-size:80px;bottom:-24px}
+.modal-back{padding:0;place-items:end center}.modal{border-radius:18px 18px 0 0;max-height:92vh;padding:17px 15px calc(20px + env(safe-area-inset-bottom))}
 }
 </style>
 </head>
 <body>
 <div class="app">
 <header class="top">
-  <div class="brand"><div class="mark">D</div><div><h1>DOM PLAY TV</h1><p>SUA DIVERSÃO EM OUTRO NÍVEL</p></div></div>
-  <div class="status">● Painel local</div>
+<div class="brand"><div class="mark">D</div><div><h1>DOM PLAY TV</h1><p>SUA DIVERSÃO EM OUTRO NÍVEL</p></div></div>
+<div class="status">● Painel local</div>
 </header>
 <section class="hero">
-  <div class="eyebrow">CENTRAL DE CONTROLE</div>
-  <h2>Seu negócio.<br>Seu controle.</h2>
-  <p>Gerencie clientes, planos, recargas e recebimentos em um só lugar. Feito para funcionar na tela do seu iPhone.</p>
-  <div class="actions"><button class="btn primary" onclick="openClientModal()">＋ Novo cliente</button><button class="btn ghost" onclick="showPage('payments')">＋ Registrar pagamento</button></div>
+<div class="eyebrow">CENTRAL DE CONTROLE</div>
+<h2>Seu negócio.<br>Seu controle.</h2>
+<p>Gerencie clientes, planos, recargas e recebimentos em um só lugar. Feito para funcionar na tela do seu iPhone.</p>
+<div class="actions"><button class="btn primary" onclick="openClientModal()">＋ Novo cliente</button><button class="btn ghost" onclick="showPage('payments')">＋ Registrar pagamento</button></div>
 </section>
 <section class="stats">
-  <div class="stat"><div class="label">Clientes cadastrados</div><div class="value" id="statClients">0</div><div class="foot">Total na sua base</div></div>
-  <div class="stat green"><div class="label">Assinaturas ativas</div><div class="value" id="statActive">0</div><div class="foot">Não vencidas</div></div>
-  <div class="stat red"><div class="label">Recebido neste mês</div><div class="value" id="statRevenue">R$ 0,00</div><div class="foot">Pagamentos registrados</div></div>
-  <div class="stat"><div class="label">Vencendo em 7 dias</div><div class="value" id="statDue">0</div><div class="foot">Acompanhe as renovações</div></div>
+<div class="stat"><div class="label">Clientes cadastrados</div><div class="value" id="statClients">0</div><div class="foot">Total na sua base</div></div>
+<div class="stat green"><div class="label">Assinaturas ativas</div><div class="value" id="statActive">0</div><div class="foot">Não vencidas</div></div>
+<div class="stat red"><div class="label">Recebido neste mês</div><div class="value" id="statRevenue">R$ 0,00</div><div class="foot">Pagamentos registrados</div></div>
+<div class="stat"><div class="label">Vencendo em 7 dias</div><div class="value" id="statDue">0</div><div class="foot">Acompanhe as renovações</div></div>
 </section>
 <nav class="nav" id="mainNav">
-  <button class="active" data-page="dashboard" onclick="showPage('dashboard')">Visão geral</button>
-  <button data-page="clients" onclick="showPage('clients')">Clientes</button>
-  <button data-page="payments" onclick="showPage('payments')">Pagamentos</button>
-  <button data-page="plans" onclick="showPage('plans')">Planos</button>
-  <button data-page="settings" onclick="showPage('settings')">Configurações</button>
+<button class="active" data-page="dashboard" onclick="showPage('dashboard')">Visão geral</button>
+<button data-page="clients" onclick="showPage('clients')">Clientes</button>
+<button data-page="payments" onclick="showPage('payments')">Pagamentos</button>
+<button data-page="plans" onclick="showPage('plans')">Planos</button>
+<button data-page="settings" onclick="showPage('settings')">Configurações</button>
 </nav>
 <main>
 <section id="page-dashboard" class="page">
-  <div class="section-head"><div><h3>Resumo do negócio</h3><p>Atividade recente e próximos vencimentos</p></div><button class="btn small" onclick="exportCSV()">Exportar CSV</button></div>
-  <div class="grid2">
-    <div class="panel"><div class="section-head"><div><h3>Próximos vencimentos</h3><p>Assinaturas que precisam de atenção</p></div></div><div class="list" id="dueList"></div></div>
-    <div class="panel"><div class="section-head"><div><h3>Últimos pagamentos</h3><p>Registros mais recentes</p></div></div><div class="list" id="recentPayments"></div></div>
-  </div>
-  <div class="warning"><strong>Importante:</strong> esta primeira versão guarda os dados somente neste navegador/dispositivo. Não é um sistema em nuvem, não sincroniza entre aparelhos e não deve guardar senhas de acesso ao conteúdo ou dados completos de cartão. Antes de usar com clientes reais, vamos preparar hospedagem, autenticação, backups e proteção dos dados.</div>
+<div class="section-head"><div><h3>Resumo do negócio</h3><p>Atividade recente e próximos vencimentos</p></div><button class="btn small" onclick="exportCSV()">Exportar CSV</button></div>
+<div class="grid2">
+<div class="panel"><div class="section-head"><div><h3>Próximos vencimentos</h3><p>Assinaturas que precisam de atenção</p></div></div><div class="list" id="dueList"></div></div>
+<div class="panel"><div class="section-head"><div><h3>Últimos pagamentos</h3><p>Registros mais recentes</p></div></div><div class="list" id="recentPayments"></div></div>
+</div>
+<div class="warning"><strong>Importante:</strong> esta versão guarda os dados somente neste navegador/dispositivo. Não é um sistema em nuvem, não sincroniza entre aparelhos e não deve guardar senhas de acesso ao conteúdo ou dados completos de cartão. Antes de usar com clientes reais, prepare hospedagem, autenticação, backups e proteção dos dados.</div>
 </section>
 <section id="page-clients" class="page hidden">
-  <div class="section-head"><div><h3>Clientes</h3><p>Cadastre e acompanhe as assinaturas</p></div><button class="btn primary" onclick="openClientModal()">＋ Cadastrar</button></div>
-  <div class="toolbar"><input id="clientSearch" class="search" placeholder="Buscar por nome, telefone ou plano..." oninput="renderClients()"><select id="clientFilter" class="search" style="max-width:135px" onchange="renderClients()"><option value="all">Todos</option><option value="active">Ativos</option><option value="due">Vencendo</option><option value="expired">Vencidos</option></select></div>
-  <div class="table-wrap"><table><thead><tr><th>Cliente</th><th>Plano</th><th>Vencimento</th><th>Status</th><th>Ações</th></tr></thead><tbody id="clientsTable"></tbody></table></div>
-  <div id="clientsEmpty" class="empty hidden">Nenhum cliente cadastrado. Toque em “Cadastrar” para começar.</div>
+<div class="section-head"><div><h3>Clientes</h3><p>Cadastre e acompanhe as assinaturas</p></div><button class="btn primary" onclick="openClientModal()">＋ Cadastrar</button></div>
+<div class="toolbar"><input id="clientSearch" class="search" placeholder="Buscar por nome, telefone ou plano..." oninput="renderClients()"><select id="clientFilter" class="search" style="max-width:135px" onchange="renderClients()"><option value="all">Todos</option><option value="active">Ativos</option><option value="due">Vencendo</option><option value="expired">Vencidos</option></select></div>
+<div class="table-wrap"><table><thead><tr><th>Cliente</th><th>Plano</th><th>Vencimento</th><th>Status</th><th>Ações</th></tr></thead><tbody id="clientsTable"></tbody></table></div>
+<div id="clientsEmpty" class="empty hidden">Nenhum cliente cadastrado. Toque em “Cadastrar” para começar.</div>
 </section>
 <section id="page-payments" class="page hidden">
-  <div class="section-head"><div><h3>Pagamentos e recargas</h3><p>Registre recebimentos e custos dos acessos</p></div><button class="btn primary" onclick="openPaymentModal()">＋ Registrar</button></div>
-  <div class="grid2">
-    <div class="panel"><div class="field"><label for="payMonth">Filtrar por mês</label><input id="payMonth" type="month" onchange="renderPayments()"></div><div class="field"><label>Total recebido no filtro</label><div id="filteredRevenue" style="font-size:24px;font-weight:850">R$ 0,00</div></div><div class="field"><label>Custos registrados</label><div id="filteredCosts" style="font-size:20px;font-weight:800;color:#ff7b82">R$ 0,00</div></div><div class="field"><label>Resultado estimado</label><div id="filteredProfit" style="font-size:20px;font-weight:800;color:#35c98a">R$ 0,00</div></div></div>
-    <div class="panel"><div class="section-head"><div><h3>Como registrar</h3><p>Fluxo inicial manual</p></div></div><p class="hint">1. Selecione o cliente.<br>2. Informe o valor recebido e o custo cobrado pelo fornecedor.<br>3. Marque o método de pagamento e confirme.<br>4. A oferta selecionada poderá atualizar a validade, incluindo os meses grátis.</p><p class="hint">A confirmação do Pix ainda não é automática nesta versão. Não marque um pagamento como recebido antes de confirmar no seu banco.</p></div>
-  </div>
-  <div class="table-wrap"><table><thead><tr><th>Data</th><th>Cliente</th><th>Recebido</th><th>Custo</th><th>Método</th><th>Nota</th></tr></thead><tbody id="paymentsTable"></tbody></table></div><div id="paymentsEmpty" class="empty hidden">Nenhum pagamento registrado.</div>
+<div class="section-head"><div><h3>Pagamentos e recargas</h3><p>Registre recebimentos e custos dos acessos</p></div><button class="btn primary" onclick="openPaymentModal()">＋ Registrar</button></div>
+<div class="grid2">
+<div class="panel"><div class="field"><label for="payMonth">Filtrar por mês</label><input id="payMonth" type="month" onchange="renderPayments()"></div><div class="field"><label>Total recebido no filtro</label><div id="filteredRevenue" style="font-size:24px;font-weight:850">R$ 0,00</div></div><div class="field"><label>Custos registrados</label><div id="filteredCosts" style="font-size:20px;font-weight:800;color:#ff7b82">R$ 0,00</div></div><div class="field"><label>Resultado estimado</label><div id="filteredProfit" style="font-size:20px;font-weight:800;color:#35c98a">R$ 0,00</div></div></div>
+<div class="panel"><div class="section-head"><div><h3>Como registrar</h3><p>Fluxo inicial manual</p></div></div><p class="hint">1. Selecione o cliente.<br>2. Informe o valor recebido e o custo do fornecedor.<br>3. Marque o método de pagamento e confirme.<br>4. A oferta selecionada pode atualizar a validade, incluindo meses grátis.</p><p class="hint">A confirmação do Pix ainda não é automática. Não marque pagamento como recebido antes de confirmar no banco.</p></div>
+</div>
+<div class="table-wrap"><table><thead><tr><th>Data</th><th>Cliente</th><th>Recebido</th><th>Custo</th><th>Método</th><th>Nota</th></tr></thead><tbody id="paymentsTable"></tbody></table></div><div id="paymentsEmpty" class="empty hidden">Nenhum pagamento registrado.</div>
 </section>
 <section id="page-plans" class="page hidden">
-  <div class="section-head"><div><h3>Planos e promoções</h3><p>Configure os preços, meses pagos e bônus</p></div><button class="btn primary" onclick="openPlanModal()">＋ Novo plano</button></div>
-  <div class="grid2" id="plansGrid"></div>
-  <p class="hint">Os preços e prazos são editáveis. O valor cobrado pode ser diferente do preço mensal. O vencimento considera os meses pagos mais os meses de bônus.</p>
+<div class="section-head"><div><h3>Planos e promoções</h3><p>Configure os preços, meses pagos e bônus</p></div><button class="btn primary" onclick="openPlanModal()">＋ Novo plano</button></div>
+<div class="grid2" id="plansGrid"></div><p class="hint">Os preços e prazos são editáveis. O vencimento considera os meses pagos mais os meses de bônus.</p>
 </section>
 <section id="page-settings" class="page hidden">
-  <div class="section-head"><div><h3>Configurações</h3><p>Preferências e cópia de segurança local</p></div></div>
-  <div class="panel">
-    <div class="field"><label for="businessName">Nome da plataforma</label><input id="businessName" value="DOM PLAY TV"></div>
-    <div class="field"><label for="tagline">Frase de efeito</label><input id="tagline" value="Sua diversão em outro nível!"></div>
-    <div class="field"><label for="contact">WhatsApp comercial (opcional)</label><input id="contact" placeholder="Ex.: (64) 99999-9999"></div>
-    <button class="btn primary" onclick="saveSettings()">Salvar configurações</button>
-  </div>
-  <div class="panel"><h3 style="font-size:14px;margin-top:0">Backup dos dados</h3><p class="hint">Exporte uma cópia JSON para guardar seus cadastros neste dispositivo. Mantenha o arquivo em local seguro, pois pode conter dados pessoais de clientes.</p><div class="form-actions"><button class="btn" onclick="backupData()">Baixar backup</button><button class="btn" onclick="document.getElementById('restoreFile').click()">Restaurar backup</button><input type="file" id="restoreFile" accept=".json,application/json" class="hidden" onchange="restoreData(event)"></div><div class="form-actions" style="margin-top:10px"><button class="btn" onclick="clearAllData()">Apagar dados locais</button></div></div>
+<div class="section-head"><div><h3>Configurações</h3><p>Preferências e cópia de segurança local</p></div></div>
+<div class="panel"><div class="field"><label for="businessName">Nome da plataforma</label><input id="businessName" value="DOM PLAY TV"></div><div class="field"><label for="tagline">Frase de efeito</label><input id="tagline" value="Sua diversão em outro nível!"></div><div class="field"><label for="contact">WhatsApp comercial (opcional)</label><input id="contact" placeholder="Ex.: (64) 99999-9999"></div><button class="btn primary" onclick="saveSettings()">Salvar configurações</button></div>
+<div class="panel"><h3 style="font-size:14px;margin-top:0">Backup dos dados</h3><p class="hint">Exporte uma cópia JSON para guardar seus cadastros. Mantenha o arquivo em local seguro.</p><div class="form-actions"><button class="btn" onclick="backupData()">Baixar backup</button><button class="btn" onclick="document.getElementById('restoreFile').click()">Restaurar backup</button><input type="file" id="restoreFile" accept=".json,application/json" class="hidden" onchange="restoreData(event)"></div><div class="form-actions" style="margin-top:10px"><button class="btn" onclick="clearAllData()">Apagar dados locais</button></div></div>
 </section>
 </main>
-<div class="footer">DOM PLAY TV · Sua diversão em outro nível!<br>Protótipo administrativo local · V2</div>
+<div class="footer">DOM PLAY TV · Sua diversão em outro nível!<br>Protótipo administrativo local · V2.1</div>
 </div>
 <div class="bottomnav">
-<button class="active" onclick="showPage('dashboard')"><span>⌂</span>Início</button>
-<button onclick="showPage('clients')"><span>♙</span>Clientes</button>
-<button onclick="showPage('payments')"><span>↗</span>Pagamentos</button>
-<button onclick="showPage('plans')"><span>▤</span>Planos</button>
-<button onclick="showPage('settings')"><span>⚙</span>Ajustes</button>
+<button class="active" onclick="showPage('dashboard')"><span>⌂</span>Início</button><button onclick="showPage('clients')"><span>♙</span>Clientes</button><button onclick="showPage('payments')"><span>↗</span>Pagamentos</button><button onclick="showPage('plans')"><span>▤</span>Planos</button><button onclick="showPage('settings')"><span>⚙</span>Ajustes</button>
 </div>
 <div id="modalRoot"></div>
 <script>
 const KEY='domPlayTvDataV1';
 const defaultData={
-clients:[],payments:[],
-plans:[
-{id:'p1',name:'Mensal',monthsPaid:1,bonusMonths:0,days:30,price:35},
-{id:'p2',name:'Trimestral promocional',monthsPaid:3,bonusMonths:0,days:90,price:90},
-{id:'p3',name:'Semestral — pague 6, ganhe 1',monthsPaid:6,bonusMonths:1,days:210,price:150},
-{id:'p4',name:'Anual — pague 12, ganhe 2',monthsPaid:12,bonusMonths:2,days:420,price:252}
-],
-settings:{name:'DOM PLAY TV',tagline:'Sua diversão em outro nível!',contact:''}
+ clients:[],payments:[],
+ plans:[
+  {id:'p1',name:'Mensal',monthsPaid:1,bonusMonths:0,days:30,price:35},
+  {id:'p2',name:'Trimestral promocional',monthsPaid:3,bonusMonths:0,days:90,price:90},
+  {id:'p3',name:'Semestral — pague 6, ganhe 1',monthsPaid:6,bonusMonths:1,days:210,price:150},
+  {id:'p4',name:'Anual — pague 12, ganhe 2',monthsPaid:12,bonusMonths:2,days:420,price:252}
+ ],
+ settings:{name:'DOM PLAY TV',tagline:'Sua diversão em outro nível!',contact:''}
 };
+function cloneDefaults(){return JSON.parse(JSON.stringify(defaultData))}
 let data=loadData();
+
 function loadData(){
  try{
   const v=JSON.parse(localStorage.getItem(KEY));
-  if(!v||!Array.isArray(v.clients)||!Array.isArray(v.payments)||!Array.isArray(v.plans))return JSON.parse(JSON.stringify(defaultData));
-  v.settings=v.settings||JSON.parse(JSON.stringify(defaultData.settings));
+  if(!v||!Array.isArray(v.clients)||!Array.isArray(v.payments)||!Array.isArray(v.plans))return cloneDefaults();
+  v.settings=v.settings||cloneDefaults().settings;
+  // Corrigido: valores já editados pelo usuário têm prioridade sobre os padrões.
   for(const d of defaultData.plans){
    const i=v.plans.findIndex(p=>p.id===d.id);
    if(i<0)v.plans.push({...d});
-   else v.plans[i]={...v.plans[i],...d};
+   else v.plans[i]={...d,...v.plans[i]};
   }
   return v;
- }catch(e){return JSON.parse(JSON.stringify(defaultData))}
+ }catch(e){return cloneDefaults()}
 }
-function saveData(){
- localStorage.setItem(KEY,JSON.stringify(data));
- renderAll();
-}
+function saveData(){localStorage.setItem(KEY,JSON.stringify(data));renderAll()}
 function id(){return 'id-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,8)}
 function localISO(d=new Date()){
  const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');
@@ -228,8 +191,8 @@ function addMonths(iso,months){
 function fmtDate(s){if(!s)return '—';return parseISO(s).toLocaleDateString('pt-BR')}
 function money(v){return Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function clientById(id){return data.clients.find(c=>c.id===id)}
-function planById(id){return data.plans.find(p=>p.id===id)}
+function clientById(cid){return data.clients.find(c=>c.id===cid)}
+function planById(pid){return data.plans.find(p=>p.id===pid)}
 function planMonths(p){return Number(p?.monthsPaid||1)+Number(p?.bonusMonths||0)}
 function planDurationLabel(p){
  const paid=Number(p?.monthsPaid||1),bonus=Number(p?.bonusMonths||0),total=paid+bonus;
@@ -247,18 +210,16 @@ function showPage(name){
  document.getElementById('page-'+name).classList.remove('hidden');
  document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===name));
  document.querySelectorAll('.bottomnav button').forEach((b,i)=>b.classList.toggle('active',['dashboard','clients','payments','plans','settings'][i]===name));
- if(name==='clients')renderClients();
- if(name==='payments')renderPayments();
- if(name==='plans')renderPlans();
+ if(name==='clients')renderClients();if(name==='payments')renderPayments();if(name==='plans')renderPlans();
 }
 function renderAll(){
  document.getElementById('statClients').textContent=data.clients.length;
  document.getElementById('statActive').textContent=data.clients.filter(c=>daysUntil(c.expiry)>=0).length;
  const month=localISO().slice(0,7);
- document.getElementById('statRevenue').textContent=money(data.payments.filter(p=>p.date.startsWith(month)).reduce((a,p)=>a+Number(p.amount||0),0));
+ document.getElementById('statRevenue').textContent=money(data.payments.filter(p=>String(p.date||'').startsWith(month)).reduce((a,p)=>a+Number(p.amount||0),0));
  document.getElementById('statDue').textContent=data.clients.filter(c=>{const d=daysUntil(c.expiry);return d>=0&&d<=7}).length;
  document.getElementById('dueList').innerHTML=[...data.clients].sort((a,b)=>a.expiry.localeCompare(b.expiry)).filter(c=>daysUntil(c.expiry)<=7).slice(0,8).map(c=>`<div class="item"><div><strong>${esc(c.name)}</strong><small>${esc(planById(c.planId)?.name||'Plano')} · vence ${fmtDate(c.expiry)}</small></div><span class="pill ${clientStatus(c)}">${statusLabel(clientStatus(c))}</span></div>`).join('')||'<div class="empty">Nenhum vencimento próximo.</div>';
- document.getElementById('recentPayments').innerHTML=[...data.payments].sort((a,b)=>b.createdAt-a.createdAt).slice(0,6).map(p=>`<div class="item"><div><strong>${esc(p.clientName)}</strong><small>${fmtDate(p.date)} · ${esc(p.method||'')}</small></div><span class="amount">${money(p.amount)}</span></div>`).join('')||'<div class="empty">Nenhum pagamento registrado.</div>';
+ document.getElementById('recentPayments').innerHTML=[...data.payments].sort((a,b)=>(b.createdAt||0)-(a.createdAt||0)).slice(0,6).map(p=>`<div class="item"><div><strong>${esc(p.clientName)}</strong><small>${fmtDate(p.date)} · ${esc(p.method||'')}</small></div><span class="amount">${money(p.amount)}</span></div>`).join('')||'<div class="empty">Nenhum pagamento registrado.</div>';
  renderClients();renderPayments();renderPlans();
  const s=data.settings||{};
  document.getElementById('businessName').value=s.name||'DOM PLAY TV';
@@ -267,24 +228,37 @@ function renderAll(){
 }
 function openClientModal(c=null){
  const isEdit=!!c;
+ const initialPlan=planById(c?.planId)||data.plans[0];
+ const start=c?.start||localISO();
+ const expiry=c?.expiry||addMonths(start,planMonths(initialPlan));
  openModal(isEdit?'Editar cliente':'Novo cliente',`<form onsubmit="saveClient(event,'${c?.id||''}')">
  <div class="field"><label>Nome do cliente *</label><input name="name" required maxlength="100" value="${esc(c?.name||'')}" placeholder="Nome completo"></div>
  <div class="field"><label>WhatsApp / telefone</label><input name="phone" maxlength="30" value="${esc(c?.phone||'')}" placeholder="(64) 99999-9999"></div>
- <div class="field"><label>Plano / oferta *</label><select name="planId" required>${data.plans.map(p=>`<option value="${p.id}" ${(c?.planId||data.plans[0]?.id)===p.id?'selected':''}>${esc(p.name)} — ${money(p.price)} (${planDurationLabel(p)})</option>`).join('')}</select></div>
- <div class="grid2"><div class="field"><label>Início *</label><input name="start" type="date" value="${c?.start||localISO()}" required></div><div class="field"><label>Vencimento *</label><input name="expiry" type="date" value="${c?.expiry||addMonths(localISO(),planMonths(data.plans[0]))}" required></div></div>
+ <div class="field"><label>Plano / oferta *</label><select name="planId" required onchange="recalculateClientExpiry(this.form)">${data.plans.map(p=>`<option value="${p.id}" ${(initialPlan?.id)===p.id?'selected':''}>${esc(p.name)} — ${money(p.price)} (${planDurationLabel(p)})</option>`).join('')}</select></div>
+ <div class="grid2"><div class="field"><label>Início *</label><input name="start" type="date" value="${start}" required onchange="recalculateClientExpiry(this.form)"></div><div class="field"><label>Vencimento *</label><input name="expiry" type="date" value="${expiry}" required></div></div>
+ <div class="successbox" id="clientDurationSummary">Duração selecionada: ${planDurationLabel(initialPlan)}. Vencimento previsto: ${fmtDate(expiry)}.</div>
  <div class="field"><label>Observações</label><textarea name="notes" maxlength="500" placeholder="Informações não sensíveis">${esc(c?.notes||'')}</textarea></div>
- <p class="hint">Ao escolher uma oferta, confira a duração total, incluindo os meses grátis, antes de salvar.</p>
+ <p class="hint">Ao trocar o plano ou a data de início, o vencimento será recalculado automaticamente, incluindo os meses grátis. Você ainda pode ajustar a data manualmente.</p>
  <div class="form-actions"><button class="btn primary" type="submit">${isEdit?'Salvar alterações':'Salvar cliente'}</button><button class="btn" type="button" onclick="closeModal()">Cancelar</button></div></form>`);
+}
+function recalculateClientExpiry(form){
+ if(!form)return;
+ const p=planById(form.planId.value),start=form.start.value;
+ if(!p||!start)return;
+ const expiry=addMonths(start,planMonths(p));
+ form.expiry.value=expiry;
+ const box=document.getElementById('clientDurationSummary');
+ if(box)box.textContent=`Duração selecionada: ${planDurationLabel(p)}. Vencimento previsto: ${fmtDate(expiry)}.`;
 }
 function saveClient(e,cid){
  e.preventDefault();const f=new FormData(e.target);
  const c={id:cid||id(),name:String(f.get('name')).trim(),phone:String(f.get('phone')||'').trim(),planId:String(f.get('planId')),start:String(f.get('start')),expiry:String(f.get('expiry')),notes:String(f.get('notes')||'').trim()};
+ if(!c.name||!c.start||!c.expiry){alert('Preencha nome, início e vencimento.');return}
  if(cid)data.clients=data.clients.map(x=>x.id===cid?c:x);else data.clients.push(c);
  saveData();closeModal();showPage('clients');
 }
 function renderClients(){
- const q=(document.getElementById('clientSearch')?.value||'').toLowerCase();
- const filter=document.getElementById('clientFilter')?.value||'all';
+ const q=(document.getElementById('clientSearch')?.value||'').toLowerCase(),filter=document.getElementById('clientFilter')?.value||'all';
  const list=data.clients.filter(c=>{
   const p=planById(c.planId),match=[c.name,c.phone,p?.name].join(' ').toLowerCase().includes(q),st=clientStatus(c);
   return match&&(filter==='all'||filter===st);
@@ -295,8 +269,7 @@ function renderClients(){
 function deleteClient(cid){if(confirm('Excluir este cliente? O histórico de pagamentos será mantido.')){data.clients=data.clients.filter(c=>c.id!==cid);saveData()}}
 function renewClient(cid){
  const c=clientById(cid);if(!c)return;
- const p=planById(c.planId)||data.plans[0];
- if(!p){alert('Cadastre um plano primeiro.');return}
+ const p=planById(c.planId)||data.plans[0];if(!p){alert('Cadastre um plano primeiro.');return}
  const base=daysUntil(c.expiry)>=0?c.expiry:localISO();
  c.expiry=addMonths(base,planMonths(p));
  data.payments.push({id:id(),clientId:c.id,clientName:c.name,date:localISO(),amount:Number(p.price),cost:0,method:'A confirmar',note:`Renovação ${p.name}; ${planDurationLabel(p)}. Confirmar recebimento e custo do fornecedor.`,planId:p.id,createdAt:Date.now()});
@@ -310,17 +283,16 @@ function openPaymentModal(){
  <div class="field"><label>Oferta / plano aplicado *</label><select name="planId" required onchange="updatePaymentPrice(this.form);updatePaymentSummary(this.form)">${data.plans.map(p=>`<option value="${p.id}" ${p.id===defaultPlan?.id?'selected':''}>${esc(p.name)} — ${money(p.price)} (${planDurationLabel(p)})</option>`).join('')}</select></div>
  <div class="successbox" id="paymentDurationSummary">Esta oferta concede ${planDurationLabel(defaultPlan)}.</div>
  <div class="grid2"><div class="field"><label>Data *</label><input name="date" type="date" value="${localISO()}" required></div><div class="field"><label>Valor recebido (R$) *</label><input name="amount" type="number" min="0" step=".01" required value="${Number(defaultPlan?.price||0).toFixed(2)}"></div></div>
- <div class="grid2"><div class="field"><label>Custo do fornecedor (R$)</label><input name="cost" type="number" min="0" step=".01" value="0" placeholder="0,00"></div><div class="field"><label>Método</label><select name="method"><option>Pix</option><option>Dinheiro</option><option>Transferência</option><option>Cartão</option><option>A confirmar</option><option>Outro</option></select></div></div>
- <div class="field"><label><input type="checkbox" name="applyRenewal" checked style="width:auto;margin-right:7px">Aplicar esta oferta ao vencimento do cliente</label><small class="hint">Se marcado, soma a duração total da oferta ao vencimento atual (ou a partir de hoje se já venceu), atualiza o plano do cliente e inclui os meses grátis.</small></div>
+ <div class="grid2"><div class="field"><label>Custo do fornecedor (R$)</label><input name="cost" type="number" min="0" step=".01" value="0"></div><div class="field"><label>Método</label><select name="method"><option>Pix</option><option>Dinheiro</option><option>Transferência</option><option>Cartão</option><option>A confirmar</option><option>Outro</option></select></div></div>
+ <div class="field"><label><input type="checkbox" name="applyRenewal" checked style="width:auto;margin-right:7px">Aplicar esta oferta ao vencimento do cliente</label><small class="hint">Soma a duração da oferta ao vencimento atual (ou a partir de hoje se já venceu), atualiza o plano e inclui os meses grátis.</small></div>
  <div class="field"><label>Observação</label><input name="note" maxlength="250" placeholder="Ex.: promoção trimestral"></div>
  <div class="form-actions"><button class="btn primary" type="submit">Salvar pagamento</button><button class="btn" type="button" onclick="closeModal()">Cancelar</button></div></form>`);
 }
 function updatePaymentPlan(form){
- const c=clientById(form.clientId.value);if(c&&form.planId){form.planId.value=c.planId||data.plans[0]?.id;updatePaymentPrice(form);updatePaymentSummary(form)}
+ const c=clientById(form.clientId.value);
+ if(c&&form.planId){form.planId.value=c.planId||data.plans[0]?.id;updatePaymentPrice(form);updatePaymentSummary(form)}
 }
-function updatePaymentPrice(form){
- const p=planById(form.planId.value);if(p&&form.amount)form.amount.value=Number(p.price).toFixed(2);
-}
+function updatePaymentPrice(form){const p=planById(form.planId.value);if(p&&form.amount)form.amount.value=Number(p.price).toFixed(2)}
 function updatePaymentSummary(form){
  const p=planById(form.planId.value),box=document.getElementById('paymentDurationSummary');
  if(box&&p)box.textContent=`Esta oferta concede ${planDurationLabel(p)}. O valor sugerido é ${money(p.price)}; você pode editar o valor recebido.`;
@@ -329,43 +301,36 @@ function savePayment(e){
  e.preventDefault();const f=new FormData(e.target),c=clientById(f.get('clientId')),p=planById(f.get('planId'));
  if(!c||!p){alert('Selecione um cliente e uma oferta válidos.');return}
  const apply=f.get('applyRenewal')==='on';let renewalNote='';
- if(apply){
-  const base=daysUntil(c.expiry)>=0?c.expiry:localISO();
-  c.expiry=addMonths(base,planMonths(p));c.planId=p.id;
-  renewalNote=`Validade atualizada até ${fmtDate(c.expiry)}; ${planDurationLabel(p)}.`;
- }
+ if(apply){const base=daysUntil(c.expiry)>=0?c.expiry:localISO();c.expiry=addMonths(base,planMonths(p));c.planId=p.id;renewalNote=`Validade atualizada até ${fmtDate(c.expiry)}; ${planDurationLabel(p)}.`}
  data.payments.push({id:id(),clientId:c.id,clientName:c.name,date:f.get('date'),amount:Number(f.get('amount')),cost:Number(f.get('cost')||0),method:f.get('method'),note:[String(f.get('note')||'').trim(),p.name,planDurationLabel(p),renewalNote].filter(Boolean).join(' · '),planId:p.id,applyRenewal:apply,createdAt:Date.now()});
  saveData();closeModal();showPage('payments');
- if(apply)alert(`Pagamento registrado no painel. Novo vencimento de ${c.name}: ${fmtDate(c.expiry)}. A recarga no fornecedor precisa ser confirmada separadamente.`);
+ if(apply)alert(`Pagamento registrado no painel. Novo vencimento de ${c.name}: ${fmtDate(c.expiry)}. Confirme a recarga separadamente com o fornecedor.`);
 }
 function renderPayments(){
  const month=document.getElementById('payMonth')?.value||localISO().slice(0,7);
- const list=[...data.payments].filter(p=>p.date.startsWith(month)).sort((a,b)=>b.date.localeCompare(a.date)||b.createdAt-a.createdAt);
+ const list=[...data.payments].filter(p=>String(p.date||'').startsWith(month)).sort((a,b)=>b.date.localeCompare(a.date)||(b.createdAt||0)-(a.createdAt||0));
  const rev=list.reduce((a,p)=>a+Number(p.amount||0),0),cost=list.reduce((a,p)=>a+Number(p.cost||0),0);
- document.getElementById('filteredRevenue').textContent=money(rev);
- document.getElementById('filteredCosts').textContent=money(cost);
- document.getElementById('filteredProfit').textContent=money(rev-cost);
- document.getElementById('paymentsTable').innerHTML=list.map(p=>`<tr><td>${fmtDate(p.date)}</td><td>${esc(p.clientName)}</td><td>${money(p.amount)}</td><td>${money(p.cost)}</td><td>${esc(p.method)}</td><td>${esc(p.note||'—')} <button class="btn small" onclick="deletePayment('${p.id}')">Excluir</button></td></tr>`).join('');
+ document.getElementById('filteredRevenue').textContent=money(rev);document.getElementById('filteredCosts').textContent=money(cost);document.getElementById('filteredProfit').textContent=money(rev-cost);
+ document.getElementById('paymentsTable').innerHTML=list.map(p=>`<tr><td>${fmtDate(p.date)}</td><td>${esc(p.clientName)}</td><td>${money(p.amount)}</td><td>${money(p.cost)}</td><td>${esc(p.method||'')}</td><td>${esc(p.note||'—')} <button class="btn small" onclick="deletePayment('${p.id}')">Excluir</button></td></tr>`).join('');
  document.getElementById('paymentsEmpty').classList.toggle('hidden',list.length>0);
 }
 function deletePayment(pid){if(confirm('Excluir este registro de pagamento?')){data.payments=data.payments.filter(p=>p.id!==pid);saveData()}}
 function openPlanModal(p=null){
  openModal(p?'Editar plano':'Novo plano',`<form onsubmit="savePlan(event,'${p?.id||''}')">
  <div class="field"><label>Nome da oferta *</label><input name="name" required maxlength="60" value="${esc(p?.name||'')}" placeholder="Ex.: Pague 6, ganhe 1"></div>
- <div class="grid2"><div class="field"><label>Meses pagos *</label><input name="monthsPaid" type="number" min="1" max="120" required value="${p?.monthsPaid||1}"></div><div class="field"><label>Meses grátis (bônus)</label><input name="bonusMonths" type="number" min="0" max="120" required value="${p?.bonusMonths||0}"></div></div>
+ <div class="grid2"><div class="field"><label>Meses pagos *</label><input name="monthsPaid" type="number" min="1" max="120" required value="${p?.monthsPaid||1}"></div><div class="field"><label>Meses grátis (bônus)</label><input name="bonusMonths" type="number" min="0" max="120" required value="${p?.bonusMonths??0}"></div></div>
  <div class="field"><label>Preço total cobrado (R$) *</label><input name="price" type="number" min="0" step=".01" required value="${p?.price??35}"></div>
- <p class="hint">O sistema soma meses pagos + bônus para calcular o vencimento. O valor cobrado é independente da duração e pode ser promocional.</p>
+ <p class="hint">O sistema soma meses pagos + bônus para calcular o vencimento. O valor cobrado é independente da duração.</p>
  <div class="form-actions"><button class="btn primary" type="submit">Salvar oferta</button><button class="btn" type="button" onclick="closeModal()">Cancelar</button></div></form>`);
 }
 function savePlan(e,pid){
- e.preventDefault();const f=new FormData(e.target);
- const monthsPaid=Number(f.get('monthsPaid')),bonusMonths=Number(f.get('bonusMonths')||0),months=monthsPaid+bonusMonths;
- const p={id:pid||id(),name:String(f.get('name')).trim(),monthsPaid,bonusMonths,days:months*30,price:Number(f.get('price'))};
+ e.preventDefault();const f=new FormData(e.target),monthsPaid=Number(f.get('monthsPaid')),bonusMonths=Number(f.get('bonusMonths')||0);
+ const p={id:pid||id(),name:String(f.get('name')).trim(),monthsPaid,bonusMonths,days:(monthsPaid+bonusMonths)*30,price:Number(f.get('price'))};
  if(pid)data.plans=data.plans.map(x=>x.id===pid?p:x);else data.plans.push(p);
  saveData();closeModal();
 }
 function renderPlans(){
- document.getElementById('plansGrid').innerHTML=data.plans.map(p=>`<div class="panel"><div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start"><div><div class="eyebrow">${planDurationLabel(p).toUpperCase()}</div><h3 style="margin:7px 0;font-size:17px">${esc(p.name)}</h3></div><div class="amount" style="font-size:20px">${money(p.price)}</div></div><p class="hint">Valor total cobrado. O vencimento considera todos os meses, incluindo bônus.</p><p class="hint">Equivalente por mês pago: <strong>${money(Number(p.price)/Math.max(1,Number(p.monthsPaid||1)))}</strong> · Acesso total: ${Number(p.monthsPaid||1)+Number(p.bonusMonths||0)} meses.</p><div class="form-actions"><button class="btn small" onclick="openPlanModal(data.plans.find(x=>x.id==='${p.id}'))">Editar</button><button class="btn small" onclick="deletePlan('${p.id}')">Excluir</button></div></div>`).join('')||'<div class="empty">Cadastre sua primeira oferta.</div>';
+ document.getElementById('plansGrid').innerHTML=data.plans.map(p=>`<div class="panel"><div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start"><div><div class="eyebrow">${planDurationLabel(p).toUpperCase()}</div><h3 style="margin:7px 0;font-size:17px">${esc(p.name)}</h3></div><div class="amount" style="font-size:20px">${money(p.price)}</div></div><p class="hint">Valor total cobrado. O vencimento considera todos os meses, incluindo bônus.</p><p class="hint">Equivalente por mês pago: <strong>${money(Number(p.price)/Math.max(1,Number(p.monthsPaid||1)))}</strong> · Acesso total: ${planMonths(p)} meses.</p><div class="form-actions"><button class="btn small" onclick="openPlanModal(planById('${p.id}'))">Editar</button><button class="btn small" onclick="deletePlan('${p.id}')">Excluir</button></div></div>`).join('')||'<div class="empty">Cadastre sua primeira oferta.</div>';
 }
 function deletePlan(pid){
  if(data.clients.some(c=>c.planId===pid)){alert('Este plano está vinculado a clientes. Edite os clientes para outro plano antes de excluí-lo.');return}
@@ -388,7 +353,7 @@ function restoreData(e){
    const x=JSON.parse(reader.result);
    if(!Array.isArray(x.clients)||!Array.isArray(x.payments)||!Array.isArray(x.plans)||!x.settings)throw Error();
    if(confirm('Restaurar backup? Isso substituirá os dados atuais deste navegador.')){data=x;saveData();alert('Backup restaurado.')}
-  }catch(err){alert('Não foi possível ler o backup. Selecione um arquivo JSON exportado por este painel.')}
+  }catch(err){alert('Não foi possível ler o backup. Selecione um JSON exportado por este painel.')}
   e.target.value='';
  };
  reader.readAsText(file);
@@ -400,7 +365,7 @@ function exportCSV(){
 }
 function clearAllData(){
  if(confirm('Tem certeza de que deseja apagar todos os dados locais? Exporte um backup antes se precisar deles.')){
-  if(prompt('Digite APAGAR para confirmar')==='APAGAR'){data=JSON.parse(JSON.stringify(defaultData));saveData();alert('Dados locais apagados.')}
+  if(prompt('Digite APAGAR para confirmar')==='APAGAR'){data=cloneDefaults();saveData();alert('Dados locais apagados.')}
  }
 }
 renderAll();
